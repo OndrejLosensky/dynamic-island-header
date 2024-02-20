@@ -48,10 +48,10 @@ const DynamicIsland = () => {
       <div className="flex items-center justify-center flex-grow">
         {showLinks && (
           <div className="text-md pt-1 text-white flex justify-center">
-            <p onClick={() => scrollToSection('anchor1')} className="underline hover:no-underline no-underline text-white cursor-pointer hover:underline">Section 1</p>
-            <p onClick={() => scrollToSection('anchor2')} className="underline hover:no-underline no-underline text-white cursor-pointer hover:underline ml-4">Section 2</p>
-            <p onClick={() => scrollToSection('anchor3')} className="underline hover:no-underline no-underline text-white cursor-pointer hover:underline ml-4">Section 3</p>
-            <p onClick={() => scrollToSection('footer')} className="underline hover:no-underline no-underline text-white cursor-pointer hover:underline ml-4">Footer</p>
+            <p onClick={() => scrollToSection('anchor1')} className="text-white cursor-pointer underline-effect hover:no-underline">Section 1</p>
+            <p onClick={() => scrollToSection('anchor2')} className="text-white cursor-pointer underline-effect hover:no-underline ml-4">Section 2</p>
+            <p onClick={() => scrollToSection('anchor3')} className="text-white cursor-pointer underline-effect hover:no-underline ml-4">Section 3</p>
+            <p onClick={() => scrollToSection('footer')} className="text-white cursor-pointer underline-effect hover:no-underline ml-4">Footer</p>
           </div>
         )}
       </div>

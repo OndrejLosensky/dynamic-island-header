@@ -9,6 +9,8 @@ import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import scrolldown from "./assets/scrolldown.png"
+import Toggle from "./components/toggle_view/Toggle"
+
 function App() {
   useEffect(() => {
     AOS.init({duration: "1000" });
@@ -46,6 +48,9 @@ const [isVisible, setIsVisible] = useState(true);
 
   return (
     <section className="bg-customBg">
+      <div className="absolute top-0 right-0 pr-4">
+        <Toggle/>
+      </div>
       <ScrollProgress/>
       <div className="pt-4 sticky top-0 z-10 ">
         <DynamicIsland/>
@@ -63,14 +68,13 @@ const [isVisible, setIsVisible] = useState(true);
 
       <div className="flex justify-center items-center h-16 pt-16">
         {isVisible && (
-            <img src={scrolldown} alt="Icon" onClick={scrollToAnchor} className="w-[48px] h-[48px] cursor-pointer" />
+            <img src={scrolldown} alt="Icon" onClick={scrollToAnchor} className="w-[48px] h-[48px] cursor-pointer hover:-translate-y-1 duration-300" />
         )}
       </div>
 
 
       <div className="flex flex-col justify-center text-customBlack items-center h-auto pt-16 pb-16">
         <div className="grid grid-cols-1 gap-8">
-          <Data />
           <Data />
           <div>
             <SectionTitleHeading title="Section 1"/>
