@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 
 const DynamicIsland = () => {
-  const [isHovering, setIsHovering] = useState(false);
+  const [isHovering, setIsHovering] = useState(true);
   const [showLinks, setShowLinks] = useState(false);
 
   const scrollToSection = (id) => {
@@ -28,13 +28,20 @@ const DynamicIsland = () => {
     setShowLinks(false);
   };
 
+  const handleClickOutside = (e) => {
+    if (!e.currentTarget.contains(e.relatedTarget)) {
+        setIsHovering(false);
+    }
+  };
+
   return (
     <section 
-    className='w-[250px] mx-auto duration-500 hover:w-[1000px] relative'
+    className='w-[250px] mx-auto duration-500 hover:w-[1000px] relative '
     onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
+    onClick={handleClickOutside}
   >
-    <div className="h-[62px] py-4 bg-customBlack flex items-center justify-between" style={{ borderTopLeftRadius: '45px', borderTopRightRadius: '45px', borderBottomLeftRadius: '45px', borderBottomRightRadius: '45px' }}>
+    <div className="h-[64px] py-4 bg-customBlack flex items-center justify-between" style={{ borderTopLeftRadius: '45px', borderTopRightRadius: '45px', borderBottomLeftRadius: '45px', borderBottomRightRadius: '45px' }}>
       <h3 className="text-md pt-1 text-customWhite text-center font-semibold pl-12 cursor-pointer" onClick={scrollToTop}>
         Dynamic Island App.
       </h3>
@@ -44,12 +51,13 @@ const DynamicIsland = () => {
             <p onClick={() => scrollToSection('anchor1')} className="underline hover:no-underline no-underline text-white cursor-pointer hover:underline">Section 1</p>
             <p onClick={() => scrollToSection('anchor2')} className="underline hover:no-underline no-underline text-white cursor-pointer hover:underline ml-4">Section 2</p>
             <p onClick={() => scrollToSection('anchor3')} className="underline hover:no-underline no-underline text-white cursor-pointer hover:underline ml-4">Section 3</p>
+            <p onClick={() => scrollToSection('footer')} className="underline hover:no-underline no-underline text-white cursor-pointer hover:underline ml-4">Footer</p>
           </div>
         )}
       </div>
       {showLinks && (
         <div className="text-md pt-1 pr-4 text-white flex items-center">
-          <button className='px-4 py-1 border-white border-2 bg-transparent ml-4 rounded-md hover:bg-white hover:text-black duration-300'>Contact me</button>
+          <button className='px-4 py-1 border-white border-2 bg-transparent ml-4 rounded-lg hover:bg-white hover:text-black duration-300'>Contact me</button>
         </div>
       )}
     </div>
