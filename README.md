@@ -11,13 +11,11 @@
 ```
 
 ## Preview
-
-[Insert screenshots, gifs, or videos here to showcase your project.]
-
+<img width="1673" alt="Snímek obrazovky 2024-02-20 v 22 54 09" src="https://github.com/OndrejLosensky/dynamic-island-header/assets/127244546/1e956ebb-1bb9-41e7-bf7d-6968a49eea1a">
 
 ## License
 
-This project is licensed under the Open Software License 3.0: [Link to LICENSE.md]
+This project is licensed under the Apache license 2.0 [Link to LICENSE.md](https://github.com/OndrejLosensky/dynamic-island-header/blob/main/LICENSE)
 
 ## Authors
 
