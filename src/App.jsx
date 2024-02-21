@@ -76,32 +76,40 @@ const [isVisible, setIsVisible] = useState(true);
       <div className="flex flex-col justify-center text-customBlack items-center h-auto pt-16 pb-16">
         <div className="grid grid-cols-1 gap-8">
           <Data />
-          <div>
-            <SectionTitleHeading title="Section 1"/>
-            <h2 className="text-4xl text-left font-bold text-customBlack" id="anchor1" style={{ scrollMarginTop: '120px' }}> Anchor point</h2>
+          <div id="anchor1">
+            <div>
+              <SectionTitleHeading title="Section 1"/>
+              <h2 className="text-4xl text-left font-bold text-customBlack"  style={{ scrollMarginTop: '120px' }}> Anchor point</h2>
+            </div>
+            <Data />
+            <Data />
+            <Data />
+            <Data />
+            <Data />
+            <Data />
           </div>
-          <Data />
-          <Data />
-          <Data />
-          <Data />
-          <Data />
-          <Data />
-          <div>
-            <SectionTitleHeading title="Section 2"/>
-            <h2 className="text-4xl text-left font-bold text-customBlack" id="anchor2" style={{ scrollMarginTop: '120px' }}> Anchor point</h2>
+          
+          <div id="anchor2">
+            <div>
+              <SectionTitleHeading title="Section 2"/>
+              <h2 className="text-4xl text-left font-bold text-customBlack"  style={{ scrollMarginTop: '120px' }}> Anchor point</h2>
+            </div>
+            <Data />
+            <Data />
+            <Data />
+            <Data />
           </div>
-          <Data />
-          <Data />
-          <Data />
-          <Data />
-          <div>
-            <SectionTitleHeading title="Section 3"/>
-            <h2 className="text-4xl text-left font-bold text-customBlack" id="anchor3" style={{ scrollMarginTop: '120px' }}> Anchor point</h2>
+
+          <div id="anchor3">
+            <div>
+              <SectionTitleHeading title="Section 3"/>
+              <h2 className="text-4xl text-left font-bold text-customBlack" style={{ scrollMarginTop: '120px' }}> Anchor point</h2>
+            </div>
+            <Data />
+            <Data />
+            <Data />
+            <Data />           
           </div>
-          <Data />
-          <Data />
-          <Data />
-          <Data />
         </div>
       </div>
 

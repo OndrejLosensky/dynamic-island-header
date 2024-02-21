@@ -1,4 +1,6 @@
 import React, { useState, useEffect,useRef } from 'react';
+import { Link } from "react-scroll";
+import { navLinkData } from '../../constants/navigation';
 
 const DynamicIsland = () => {
   const [isHovering, setIsHovering] = useState(true);
@@ -48,10 +50,32 @@ const DynamicIsland = () => {
       <div className="flex items-center justify-center flex-grow">
         {showLinks && (
           <div className="text-md pt-1 text-white flex justify-center">
+              {
+              navLinkData.map(({_id, title, link}) => (
+                <ul>
+                  <li className='mr-4 cursor-pointer underline-effect hover:no-underline' 
+                      key={_id}>
+                      <Link
+                        activeClass="active"
+                        to={link}
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                      >
+                        {title}
+                      </Link>
+                  </li>
+                </ul>
+              ))
+              }
+            
+          {/*
             <p onClick={() => scrollToSection('anchor1')} className="text-white cursor-pointer underline-effect hover:no-underline">Section 1</p>
             <p onClick={() => scrollToSection('anchor2')} className="text-white cursor-pointer underline-effect hover:no-underline ml-4">Section 2</p>
             <p onClick={() => scrollToSection('anchor3')} className="text-white cursor-pointer underline-effect hover:no-underline ml-4">Section 3</p>
             <p onClick={() => scrollToSection('footer')} className="text-white cursor-pointer underline-effect hover:no-underline ml-4">Footer</p>
+          */}
           </div>
         )}
       </div>
