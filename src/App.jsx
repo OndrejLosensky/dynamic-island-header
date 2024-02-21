@@ -13,7 +13,7 @@ import Toggle from "./components/toggle_view/Toggle"
 
 function App() {
   useEffect(() => {
-    AOS.init({duration: "1000" });
+    AOS.init({duration: "1200" });
   },[])
 
   const goToGithub = () => {
@@ -77,9 +77,9 @@ const [isVisible, setIsVisible] = useState(true);
         <div className="grid grid-cols-1 gap-8">
           <Data />
           <div id="anchor1">
-            <div>
+            <div data-aos="fade-left">
               <SectionTitleHeading title="Section 1"/>
-              <h2 className="text-4xl text-left font-bold text-customBlack"  style={{ scrollMarginTop: '120px' }}> Anchor point</h2>
+              <h2 className="text-4xl text-left font-bold text-customBlack"> Anchor point</h2>
             </div>
             <Data />
             <Data />
@@ -90,9 +90,9 @@ const [isVisible, setIsVisible] = useState(true);
           </div>
           
           <div id="anchor2">
-            <div>
+            <div data-aos="fade-left">
               <SectionTitleHeading title="Section 2"/>
-              <h2 className="text-4xl text-left font-bold text-customBlack"  style={{ scrollMarginTop: '120px' }}> Anchor point</h2>
+              <h2 className="text-4xl text-left font-bold text-customBlack"> Anchor point</h2>
             </div>
             <Data />
             <Data />
@@ -101,9 +101,9 @@ const [isVisible, setIsVisible] = useState(true);
           </div>
 
           <div id="anchor3">
-            <div>
+            <div data-aos="fade-left">
               <SectionTitleHeading title="Section 3"/>
-              <h2 className="text-4xl text-left font-bold text-customBlack" style={{ scrollMarginTop: '120px' }}> Anchor point</h2>
+              <h2 className="text-4xl text-left font-bold text-customBlack"> Anchor point</h2>
             </div>
             <Data />
             <Data />
