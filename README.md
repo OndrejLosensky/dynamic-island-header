@@ -22,8 +22,6 @@ This project is licensed under the Apache license 2.0 [Link to LICENSE.md](https
 * Ondrej Losensky
 
 ## Languages & Tools Used
-
-* Link to JavaScript: [https://www.javascript.com/](https://www.javascript.com/)
 * Link to React: [https://reactjs.org/](https://reactjs.org/)
 * Link to Tailwind CSS: [https://tailwindcss.com/](https://tailwindcss.com/)
 * Link to Icons8.com [https://icons8.com/](https://icons8.com/)
