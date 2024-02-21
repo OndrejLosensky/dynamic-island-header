@@ -31,3 +31,7 @@ This project is licensed under the Apache license 2.0 [Link to LICENSE.md](https
 ## Project Creation Date
 
 * Created on: 19.2.2024
+
+## Version
+
+1.0.0.
