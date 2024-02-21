@@ -3,7 +3,7 @@
 **Simple web application made with React.js styled with TailwindCSS. Instead of clasical header I have created this one that looks like Apple's dynamic island on new iPhones. It expands when user hovers over it and displays additional information or controls.**
 
 ## Installation
-*You can easily implement this into your project by coyping the component and then just styling the whole component with given options*
+*You can easily implement this into your project by coyping the component and then just styling the whole component with given options. Also you need to have TailwindCSS installed for it to work*
 ```bash
 <div className="pt-4 sticky top-0 z-10 ">
     <DynamicIsland/>
