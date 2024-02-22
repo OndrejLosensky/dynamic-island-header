@@ -60,6 +60,22 @@ const [isVisible, setIsVisible] = useState(true);
       root.classList.toggle('dark');
     };
 
+    useEffect(() => {
+      const handleKeyDown = (event) => {
+        // combination of CTRL + CMD + T keys!!
+        if (event.ctrlKey && event.metaKey && event.key === 't') {
+          toggleTheme();
+        }
+      };
+  
+      window.addEventListener('keydown', handleKeyDown);
+  
+      return () => {
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+    }, []); // Empty dependency array ensures the effect runs only once
+  
+
   return (
     <section className="main-component">
       <ScrollProgress/>
@@ -71,7 +87,16 @@ const [isVisible, setIsVisible] = useState(true);
         <div data-aos="fade-right" className="flex flex-col items-start text-left">
           <SectionTitleHeading title="Homepage"/>
           <Title heading="Dynamic Island Header"/>
-          <p className="mt-6 homepage-paragraph">This app was made with React.js and TailwindCSS. <br /> You can implement this to your website just by <br /> importing the component from source code</p>
+          <p className="mt-6 homepage-paragraph">
+            This app was made with React.js and TailwindCSS. <br /> 
+            You can implement this to your website just by <br />
+            importing the component from source code <br />
+            <div className="pt-4 text-sm opacity-70">
+              <span className="key bg-slate-400 py-1 px-2 rounded-md text-customWhite mr-1">CTRL</span>  +   
+              <span className="key bg-slate-400 py-1 px-2 rounded-md text-customWhite ml-2 mr-1">CMD</span> + 
+              <span className="key bg-slate-400 py-1 px-2 rounded-md text-customWhite ml-2">T</span> – toggle dark mode
+            </div>
+          </p>
           <div className="flex flex-row">
             <button onClick={goToGithub} className="mt-4 px-4 py-2 bg-blue-500 flex flex-row rounded-lg text-md text-customWhite hover:-translate-y-1 hover:bg-blue-700 duration-300 ">
               <img src={source_code} alt="Icon" className="w-6 h-6 mr-2" />

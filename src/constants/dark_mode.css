@@ -104,3 +104,13 @@ color: #fefffe;
 .paragraph-bugs-section {
   color: rgb(165, 165, 165);
 }
+
+.key {
+  color: whitesmoke;
+  background-color: #5c5c5c;
+}
+
+.dark .key {
+  color: #202020;
+  background-color: #b9b9b9;
+}
