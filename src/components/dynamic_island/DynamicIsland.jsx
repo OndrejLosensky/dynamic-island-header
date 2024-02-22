@@ -6,10 +6,6 @@ const DynamicIsland = () => {
   const [isHovering, setIsHovering] = useState(true);
   const [showLinks, setShowLinks] = useState(false);
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    element.scrollIntoView({ behavior: 'smooth' });
-  };
 
   const scrollToTop = () => {
     window.scrollTo({
