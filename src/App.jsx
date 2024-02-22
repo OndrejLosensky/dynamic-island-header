@@ -69,7 +69,7 @@ const [isVisible, setIsVisible] = useState(true);
           <div className="flex flex-row">
             <button onClick={goToGithub} className="mt-4 px-4 py-2 bg-blue-500 rounded-lg text-md text-customWhite hover:-translate-y-1 hover:bg-blue-700 duration-300 ">View source code</button>
             <button onClick={toggleTheme} className="toggle-btn px-4 py-2 mt-4 border-2 border-blue-500 rounded-lg ml-2 hover:-translate-y-1 duration-300">
-              <span className={isLight ? 'dark-mode-text' : 'light-mode-text'}>
+              <span className={isLight ? 'light-mode-text' : 'dark-mode-text'}>
                 {isLight ? 'Toggle Dark Mode' : 'Toggle Light Mode'}
               </span>
             </button>
