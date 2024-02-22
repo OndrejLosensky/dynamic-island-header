@@ -1,0 +1,92 @@
+.title-layout, .data-text, .anchor-heading, .homepage-paragraph {
+  color: #030f1e; /* Default color */
+}
+
+.main-component, .toggle-btn {
+  background-color: #F8F8FF;
+}
+
+.dark .main-component, .dark .toggle-btn {
+  background-color: #212121;
+}
+
+.dark .title-layout, .dark .data-text, .dark .anchor-heading, .dark .homepage-paragraph {
+color: #fefffe;
+}
+
+.section-heading {
+  color: rgb(0, 115, 255);
+}
+
+.island-bg {
+  background-color: #030f1e;
+}
+
+.dark .island-bg {
+  background-color: #fefffe;
+}
+
+.island-text {
+  color: #fefffe;
+}
+
+.dark .island-text {
+  color: #030f1e;
+}
+
+.island-btn {
+  border: 2px solid white;
+}
+
+.dark .island-btn {
+  border: 2px solid black;
+}
+
+.island-btn:hover {
+  color: black;
+  background-color: #212121;
+}
+
+.underline-effect {
+  position: relative;
+}
+.underline-effect::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.underline-effect:hover::before {
+  transform: scaleX(1);
+}
+
+.dark .underline-effect {
+  position: relative;
+}
+.dark .underline-effect::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.dark .underline-effect:hover::before {
+  transform: scaleX(1);
+}
+
+.light-mode-text {
+  color: #000000;
+}
+
+.dark-mode-text {
+  color: white;
+}

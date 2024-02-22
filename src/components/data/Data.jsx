@@ -8,7 +8,7 @@ const Data = () => {
     AOS.init({duration: "1200" });
   },[])
   return (
-    <div data-aos="fade-left">
+    <div className='data-text py-2' data-aos="fade-left">
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada tortor a lorem feugiat in tincidunt metus finibus. Duis euismod libero in justo dapibus <br />
         non consectetur tortor rhoncus. Proin eu urna vitae libero fermentum lacinia. In hac habitasse platea dictumst. Nulla facilisi. Donec id mi fermentum, viverra <br />

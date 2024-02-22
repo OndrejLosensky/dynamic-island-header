@@ -39,13 +39,13 @@ const DynamicIsland = () => {
     onMouseLeave={handleMouseLeave}
     onClick={handleClickOutside}
   >
-    <div className="h-[64px] py-4 bg-customBlack flex items-center justify-between" style={{ borderTopLeftRadius: '45px', borderTopRightRadius: '45px', borderBottomLeftRadius: '45px', borderBottomRightRadius: '45px' }}>
-      <h3 className="text-md pt-1 text-customWhite text-center font-semibold pl-12 cursor-pointer" onClick={scrollToTop}>
+    <div className="h-[64px] py-4 island-bg flex items-center justify-between" style={{ borderTopLeftRadius: '45px', borderTopRightRadius: '45px', borderBottomLeftRadius: '45px', borderBottomRightRadius: '45px' }}>
+      <h3 className="text-md pt-1 island-text text-customWhite text-center font-semibold pl-12 cursor-pointer" onClick={scrollToTop}>
         Dynamic Island App.
       </h3>
       <div className="flex items-center justify-center flex-grow">
         {showLinks && (
-          <div className="text-md pt-1 text-white flex justify-center">
+          <div className="text-md pt-1 island-text flex justify-center">
               {
               navLinkData.map(({_id, title, link}) => (
                 <ul>
@@ -76,8 +76,8 @@ const DynamicIsland = () => {
         )}
       </div>
       {showLinks && (
-        <div className="text-md pt-1 pr-4 text-white flex items-center">
-          <button className='px-4 py-1 border-white border-2 bg-transparent ml-4 rounded-lg hover:bg-white hover:text-black duration-300'>Contact me</button>
+        <div className="text-md pt-1 pr-4 island-text flex items-center">
+          <button className='island-btn px-4 py-1  border-2 bg-transparent ml-4 rounded-lg'>Contact me</button>
         </div>
       )}
     </div>

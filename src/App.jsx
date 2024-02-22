@@ -8,8 +8,8 @@ import SectionTitleHeading from "./layouts/SectionTitle"
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
-import scrolldown from "./assets/scrolldown.png"
-import Toggle from "./components/toggle_view/Toggle"
+import scrolldown_light from "./assets/scroll_down_white.png"
+import scrolldown_dark from "./assets/scroll_down_black.png"
 
 function App() {
   useEffect(() => {
@@ -21,7 +21,7 @@ function App() {
   }
 
   const scrollToAnchor = () => {
-    const element = document.getElementById('anchor1');
+    const element = document.getElementById('data-anchor');
     if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -46,11 +46,16 @@ const [isVisible, setIsVisible] = useState(true);
         };
     }, []);
 
+    const [isLight, setIsLight] = useState(true);
+
+    const toggleTheme = () => {
+      setIsLight(prevIsLight => !prevIsLight);
+      const root = document.documentElement;
+      root.classList.toggle('dark');
+    };
+
   return (
-    <section className="bg-customBg">
-      <div className="absolute top-0 right-0 pr-4">
-        <Toggle/>
-      </div>
+    <section className="main-component">
       <ScrollProgress/>
       <div className="pt-4 sticky top-0 z-10 ">
         <DynamicIsland/>
@@ -60,26 +65,33 @@ const [isVisible, setIsVisible] = useState(true);
         <div data-aos="fade-right" className="flex flex-col items-start text-left">
           <SectionTitleHeading title="Homepage"/>
           <Title heading="Dynamic Island Header"/>
-          <p className="mt-6">This app was made with React.js and TailwindCSS. <br /> You can implement this to your website just by <br /> importing the component from source code</p>
-          <button onClick={goToGithub} className="mt-4 px-4 py-2 bg-blue-500 rounded-lg text-md text-customWhite hover:-translate-y-1 hover:bg-blue-700 duration-300 ">View source code</button>
+          <p className="mt-6 homepage-paragraph">This app was made with React.js and TailwindCSS. <br /> You can implement this to your website just by <br /> importing the component from source code</p>
+          <div className="flex flex-row">
+            <button onClick={goToGithub} className="mt-4 px-4 py-2 bg-blue-500 rounded-lg text-md text-customWhite hover:-translate-y-1 hover:bg-blue-700 duration-300 ">View source code</button>
+            <button onClick={toggleTheme} className="toggle-btn px-4 py-2 mt-4 border-2 border-blue-500 rounded-lg ml-2 hover:-translate-y-1 duration-300">
+              <span className={isLight ? 'dark-mode-text' : 'light-mode-text'}>
+                {isLight ? 'Toggle Dark Mode' : 'Toggle Light Mode'}
+              </span>
+            </button>
+          </div>
         </div>
         <img data-aos="fade-left" src={logo} alt="Icon" className="pb-12 h-[300px] w-[420px]" />
       </div>
 
       <div className="flex justify-center items-center h-16 pt-16">
         {isVisible && (
-            <img src={scrolldown} alt="Icon" onClick={scrollToAnchor} className="w-[48px] h-[48px] cursor-pointer hover:-translate-y-1 duration-300" />
+            <img src={isLight ? scrolldown_light : scrolldown_dark} alt="Icon" onClick={scrollToAnchor} className="w-[48px] h-[48px] cursor-pointer hover:-translate-y-1 duration-300" />
         )}
       </div>
 
 
       <div className="flex flex-col justify-center text-customBlack items-center h-auto pt-16 pb-16">
-        <div className="grid grid-cols-1 gap-8">
+        <div id="data-anchor" className="grid grid-cols-1 gap-8">
           <Data />
           <div id="anchor1">
             <div data-aos="fade-left">
               <SectionTitleHeading title="Section 1"/>
-              <h2 className="text-4xl text-left font-bold text-customBlack"> Anchor point</h2>
+              <h2 className="anchor-heading text-4xl text-left font-bold text-customBlack uppercase mb-4"> Anchor point</h2>
             </div>
             <Data />
             <Data />
@@ -92,7 +104,7 @@ const [isVisible, setIsVisible] = useState(true);
           <div id="anchor2">
             <div data-aos="fade-left">
               <SectionTitleHeading title="Section 2"/>
-              <h2 className="text-4xl text-left font-bold text-customBlack"> Anchor point</h2>
+              <h2 className="anchor-heading uppercase mb-4 text-4xl text-left font-bold text-customBlack"> Anchor point</h2>
             </div>
             <Data />
             <Data />
@@ -103,7 +115,7 @@ const [isVisible, setIsVisible] = useState(true);
           <div id="anchor3">
             <div data-aos="fade-left">
               <SectionTitleHeading title="Section 3"/>
-              <h2 className="text-4xl text-left font-bold text-customBlack"> Anchor point</h2>
+              <h2 className="anchor-heading uppercase mb-4 text-4xl text-left font-bold text-customBlack"> Anchor point</h2>
             </div>
             <Data />
             <Data />

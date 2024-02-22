@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SectionTitleHeading = ({ title }) => {
-    return <h1 className='font-regular text-lg text-customBlue'>{title}</h1>;
+    return <h2 className='section-heading font-regular text-lg'>{title}</h2>;
 }
 
 export default SectionTitleHeading;

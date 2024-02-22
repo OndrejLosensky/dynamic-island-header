@@ -6,16 +6,11 @@ const Toggle = () => {
   const [isLight, setIsLight] = useState(true);
 
 
-  const toggleTheme = () => {
-    setIsLight(!isLight);
-    const root = document.documentElement;
-    root.classList.toggle('dark', !isLight);
-  };
-
   return (
-    <div className='pl-2 pt-4'>
-      <button className='cursor-pointer' onClick={toggleTheme}> 
-        <img src={isLight ? light : dark} alt="Icon" className='w-8 h-8' />
+    <div className='border-blue-500 border-2 rounded-lg'>
+      <button className='cursor-pointer py-2 px-4'> 
+        {/*<img src={isLight ? light : dark} alt="Icon" className='w-8 h-8' />*/}
+        Toggle dark mode
       </button>
     </div>
   );
