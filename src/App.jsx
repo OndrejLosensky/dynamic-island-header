@@ -12,6 +12,7 @@ import scrolldown_light from "./assets/scroll_down_white.png"
 import scrolldown_dark from "./assets/scroll_down_black.png"
 import light from "./assets/light.png"
 import dark from "./assets/dark.png"
+import source_code from "./assets/src_code.png"
 
 function App() {
   useEffect(() => {
@@ -69,7 +70,10 @@ const [isVisible, setIsVisible] = useState(true);
           <Title heading="Dynamic Island Header"/>
           <p className="mt-6 homepage-paragraph">This app was made with React.js and TailwindCSS. <br /> You can implement this to your website just by <br /> importing the component from source code</p>
           <div className="flex flex-row">
-            <button onClick={goToGithub} className="mt-4 px-4 py-2 bg-blue-500 rounded-lg text-md text-customWhite hover:-translate-y-1 hover:bg-blue-700 duration-300 ">View source code</button>
+            <button onClick={goToGithub} className="mt-4 px-4 py-2 bg-blue-500 flex flex-row rounded-lg text-md text-customWhite hover:-translate-y-1 hover:bg-blue-700 duration-300 ">
+              <img src={source_code} alt="Icon" className="w-6 h-6 mr-2" />
+              View source code
+            </button>
             <button onClick={toggleTheme} className="toggle-btn px-4 py-2 mt-4 flex flex-row border-2 border-blue-500 rounded-lg ml-2 hover:-translate-y-1 duration-300">
               <img src={isLight ? light : dark} alt="Icon" className="w-6 h-6 mr-2" />
               <span className={isLight ? 'light-mode-text' : 'dark-mode-text'}>
