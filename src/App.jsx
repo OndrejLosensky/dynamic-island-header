@@ -90,11 +90,17 @@ const [isVisible, setIsVisible] = useState(true);
             <img src={isLight ? scrolldown_dark : scrolldown_light} alt="Icon" onClick={scrollToAnchor} className="w-[48px] h-[48px] cursor-pointer hover:-translate-y-1 duration-300" />
         )}
       </div>
-
+          
+      <div data-aos="fade-left" id="banner" className="pb-20 pt-32">
+            <div className="div-bugs-section w-[100%] h-[200px] bg-slate-500"> 
+                <h3 className="text-bugs-section text-center pt-8">annoying bugs</h3>
+                <h1 className="heading-bugs-section text-center text-customWhite font-semibold text-4xl pt-2"> What is the biggest bug here?</h1>
+                <p className="paragraph-bugs-section text-center text-gray-400 font-thin text-xl pt-4"> Header displaying all elemenets when hovering away from browser </p>
+            </div>
+      </div>
 
       <div className="flex flex-col justify-center text-customBlack items-center h-auto pt-16 pb-16">
         <div id="data-anchor" className="grid grid-cols-1 gap-8">
-          <Data />
           <div id="anchor1">
             <div data-aos="fade-left">
               <SectionTitleHeading title="Section 1"/>
@@ -131,6 +137,7 @@ const [isVisible, setIsVisible] = useState(true);
           </div>
         </div>
       </div>
+  
 
       <div id="footer"> 
         <Footer/>

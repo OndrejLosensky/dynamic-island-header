@@ -1,4 +1,4 @@
-.title-layout, .data-text, .anchor-heading, .homepage-paragraph {
+.title-layout, .data-text, .anchor-heading, .homepage-paragraph, .heading-bugs-section {
   color: #030f1e; /* Default color */
 }
 
@@ -10,11 +10,11 @@
   background-color: #212121;
 }
 
-.dark .title-layout, .dark .data-text, .dark .anchor-heading, .dark .homepage-paragraph {
+.dark .title-layout, .dark .data-text, .dark .anchor-heading, .dark .homepage-paragraph , .dark .heading-bugs-section{
 color: #fefffe;
 }
 
-.section-heading {
+.section-heading, .text-bugs-section {
   color: rgb(0, 115, 255);
 }
 
@@ -90,4 +90,17 @@ color: #fefffe;
 
 .dark-mode-text {
   color: white;
+}
+
+.div-bugs-section {
+  background-color: #Ffffff;
+  box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark .div-bugs-section {
+  background-color: rgb(30 41 59)
+}
+
+.paragraph-bugs-section {
+  color: gray;
 }

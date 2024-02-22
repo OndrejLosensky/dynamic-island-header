@@ -14,9 +14,4 @@ export const navLinkData = [
         title:"Section 3",
         link:"anchor3"
     },
-    {
-        _id:1004,
-        title:"Footer",
-        link:"footer"
-    },
 ]
