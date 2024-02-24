@@ -13,8 +13,8 @@ import scrolldown_dark from "./assets/scroll_down_black.png"
 import light from "./assets/light.png"
 import dark from "./assets/dark.png"
 import source_code from "./assets/src_code.png"
-import screenshot_light from "./assets/screenshot1.png"
-import screenshot_dark from "./assets/screenshot2.png"
+//import screenshot_light from "./assets/screenshot1.png"
+//import screenshot_dark from "./assets/screenshot2.png"
 
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
   }
 
   const scrollToAnchor = () => {
-    const element = document.getElementById('data-anchor');
+    const element = document.getElementById('banner');
     if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
     }
