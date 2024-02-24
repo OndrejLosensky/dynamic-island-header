@@ -28,7 +28,7 @@
 * Dynamic island header
 * Dark mode
 * Keyboard shortot to toggle **on/off** dark mode
-* Scroll Progress bar (you can find source code for it [here](https://github.com/OndrejLosensky/dynamic-island-header/tree/main/src/components/scroll_progress)
+* Scroll Progress bar (you can find source code for it [here](https://github.com/OndrejLosensky/dynamic-island-header/tree/main/src/components/scroll_progress))
 * scroll down button
 
 ## Bugs
