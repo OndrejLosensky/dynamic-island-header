@@ -120,11 +120,11 @@ const [isVisible, setIsVisible] = useState(true);
       </div>
           
       <div data-aos="fade-left" id="banner" className="pb-20 pt-32">
-            <div className="div-bugs-section w-[100%] h-[300px] bg-slate-500"> 
-                <h3 className="text-bugs-section text-center pt-8">annoying bugs</h3>
+            <div className="div-bugs-section w-[100%] h-[250px] bg-slate-500"> 
+                <h3 className="text-bugs-section text-center pt-16">annoying bugs</h3>
                 <h1 className="heading-bugs-section text-center text-customWhite font-semibold text-4xl pt-2"> What is the biggest bug here?</h1>
                 <p className="paragraph-bugs-section text-center text-gray-400 font-thin text-xl pt-4"> <li> Header displaying all elemenets when hovering away from browser  </li></p>
-                <img src={isLight ? screenshot_light : screenshot_dark} className="mx-auto w-[600px] pt-8 rounded-2xl shadow-2xl" alt="Description" />
+                {/*<img src={isLight ? screenshot_light : screenshot_dark} className="mx-auto w-[600px] pt-8 rounded-2xl shadow-2xl" alt="Description" />*/}
             </div>
       </div>
 
