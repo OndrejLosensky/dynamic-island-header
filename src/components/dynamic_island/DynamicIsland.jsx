@@ -77,7 +77,7 @@ const DynamicIsland = () => {
       </div>
       {showLinks && (
         <div className="text-md pt-1 pr-4 island-text flex items-center">
-          <button className='island-btn px-4 py-1  border-2 bg-transparent ml-4 rounded-lg'>Contact me</button>
+          <button className='island-btn px-4 py-1  border-2 bg-transparent ml-4 rounded-lg'>Login</button>
         </div>
       )}
     </div>
