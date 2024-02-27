@@ -65,6 +65,9 @@ const [isVisible, setIsVisible] = useState(true);
         // combination of CTRL + CMD + T keys!!
         if (event.ctrlKey && event.metaKey && event.key === 't') {
           toggleTheme();
+        } else if (event.ctrlKey && event.key === 'b') {
+          console
+          toggleTheme();
         }
       };
   
@@ -91,10 +94,14 @@ const [isVisible, setIsVisible] = useState(true);
             This app was made with React.js and TailwindCSS. <br /> 
             You can implement this to your website just by <br />
             importing the component from source code <br />
-            <div className="pt-4 text-sm opacity-70">
+            <div className="pt-6 text-sm opacity-70">
               <span className="key bg-slate-400 py-1 px-2 rounded-md text-customWhite mr-1">CTRL</span>  +   
               <span className="key bg-slate-400 py-1 px-2 rounded-md text-customWhite ml-2 mr-1">CMD</span> + 
-              <span className="key bg-slate-400 py-1 px-2 rounded-md text-customWhite ml-2">T</span> – toggle dark mode
+              <span className="key bg-slate-400 py-1 px-2 rounded-md text-customWhite ml-2">T</span> – toggle dark mode (for MacOS)
+            </div>
+            <div className="pt-6 text-sm opacity-70">
+              <span className="key bg-slate-400 py-1 px-2 rounded-md text-customWhite mr-1">CTRL</span>  +   
+              <span className="key bg-slate-400 py-1 px-2 rounded-md text-customWhite ml-2">B</span> – toggle dark mode (for Windows)
             </div>
           </p>
           <div className="flex flex-row">
@@ -110,7 +117,7 @@ const [isVisible, setIsVisible] = useState(true);
             </button>
           </div>
         </div>
-        <img data-aos="fade-left" src={logo} alt="Icon" className="pb-12 h-[300px] w-[420px]" />
+        <img data-aos="fade-left" src={logo} alt="Icon" className="pb-12 h-[350px] w-[480px]" />
       </div>
 
       <div className="flex justify-center items-center h-16 pt-16">
@@ -121,9 +128,13 @@ const [isVisible, setIsVisible] = useState(true);
           
       <div data-aos="fade-left" id="banner" className="pb-20 pt-32">
             <div className="div-bugs-section w-[100%] h-[250px] bg-slate-500"> 
-                <h3 className="text-bugs-section text-center pt-16">annoying bugs</h3>
-                <h1 className="heading-bugs-section text-center text-customWhite font-semibold text-4xl pt-2"> What is the biggest bug here?</h1>
-                <p className="paragraph-bugs-section text-center text-gray-400 font-thin text-xl pt-4"> <li> Header displaying all elemenets when hovering away from browser  </li></p>
+                <h3 className="text-bugs-section text-center pt-12">annoying bugs</h3>
+                <h1 className="heading-bugs-section text-center text-customWhite font-semibold text-4xl pt-2"> Common bugs</h1>
+                <p className="paragraph-bugs-section text-center text-gray-400 font-thin text-xl pt-4">
+                  <li> Login not working </li>
+                  <li>Mobile / smaller devices view isnt done yet</li>
+                  <li> Header displaying all elemenets when hovering away from browser  </li>
+                </p>
                 {/*<img src={isLight ? screenshot_light : screenshot_dark} className="mx-auto w-[600px] pt-8 rounded-2xl shadow-2xl" alt="Description" />*/}
             </div>
       </div>
