@@ -139,7 +139,7 @@ const [isVisible, setIsVisible] = useState(true);
             </div>
       </div>
 
-      <div id="login-section" className="login-section font-roboto pt-8 h-[400px] rounded-lg shadow-lg mx-auto flex flex-row">
+      <div id="login-section" className="login-section font-roboto pt-8 h-[450px] rounded-lg shadow-lg mx-auto flex flex-row">
         <div className="left-side-login w-1/2 flex flex-col items-center justify-center">
           <SectionTitleHeading title="Login section"/>
           <h2 className="font-bold text-3xl pb-2 text-customBlack text-center uppercase" style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}>

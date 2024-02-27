@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'roboto': ['Roboto', 'sans-serif'],
+        'handWritten': ['Pacifico', 'cursive'],
       },
       colors: {
         customBg: '#F8F8FF',

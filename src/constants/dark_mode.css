@@ -43,6 +43,12 @@ color: #fefffe;
   border: 2px solid black;
 }
 
+.dark .island-btn:hover {
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  border: 2px solid black;
+}
+
 .island-btn:hover {
   color: black;
   background-color: #212121;

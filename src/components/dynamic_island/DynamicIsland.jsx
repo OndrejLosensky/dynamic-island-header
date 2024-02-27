@@ -14,6 +14,19 @@ const DynamicIsland = () => {
     });
   };
 
+  const scrollToAnchor = () => {
+    const element = document.getElementById('login-section');
+    const offset = 60; 
+  
+    if (element) {
+      const offsetTop = element.offsetTop - offset;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const handleMouseEnter = () => {
     setIsHovering(true);
     setTimeout(() => {
@@ -77,7 +90,7 @@ const DynamicIsland = () => {
       </div>
       {showLinks && (
         <div className="text-md pt-1 pr-4 island-text flex items-center">
-          <button className='island-btn px-4 py-1  border-2 bg-transparent ml-4 rounded-lg'>Login</button>
+          <button className='island-btn px-4 py-1  border-2 bg-transparent ml-4 rounded-lg hover:bg-customWhite hover:text-customBlack duration-300' onClick={scrollToAnchor}>Login</button>
         </div>
       )}
     </div>

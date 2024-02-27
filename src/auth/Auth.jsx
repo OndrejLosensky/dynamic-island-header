@@ -27,15 +27,15 @@ const Auth = () => {
 
     return (
         <div className='flex flex-col items-center'>
-            <div className='flex mb-4 pt-4'>
+            <div className='flex mb-4 pt-8'>
                 <button
-                    className={`text-2xl font-semibold py-4 mr-4 ${isLoginForm ? 'text-blue-500 underline underline-offset-2' : 'text-gray-600 no-underline'}`}
+                    className={`text-2xl font-semibold py-4 mr-4 ${isLoginForm ? 'text-blue-500' : 'text-gray-600'}`}
                     onClick={switchForm}
                 >
                     Login
                 </button>
                 <button
-                    className={`text-2xl font-semibold py-4  ${isLoginForm ? 'text-gray-600 no-underline' : 'text-blue-500 underline underline-offset-2'}`}
+                    className={`text-2xl font-semibold py-4  ${isLoginForm ? 'text-gray-600' : 'text-blue-500'}`}
                     onClick={switchForm}
                 >
                     Register
