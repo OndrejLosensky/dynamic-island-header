@@ -1,9 +1,12 @@
 # Dynamic Header
 
-**Simple web application made with React.js styled with TailwindCSS. Instead of clasical header I have created this one that looks like Apple's dynamic island on new iPhones. It expands when user hovers over it and displays additional information or controls.**
+Simple web application made with React.js styled with TailwindCSS. Instead of clasical header I have created this one that looks like Apple's dynamic island on new iPhones. It expands when user hovers over it and displays additional information or controls. I have also added animations, shortcuts, styling and database with option to register just because i wanted to even it has nothing to do with the header.
 
-**The app now has dark mode button which can also be toggled by keyboard shortcut (CTRL + CMD + T)**
+### Darkmode shortcut
+**CTRL + CMD + T** - *MacOS*
 
+**CTRL + B** - *Windows*
+ 
 ## Installation
 *You can easily implement this into your project by coyping the component and then just styling the whole component with given options. Also you need to have TailwindCSS installed for it to work*
 ```bash
@@ -30,6 +33,7 @@
 * Keyboard shortot to toggle **on/off** dark mode
 * Scroll Progress bar (you can find source code for it [here](https://github.com/OndrejLosensky/dynamic-island-header/tree/main/src/components/scroll_progress))
 * scroll down button
+* login and register form
 
 ## Bugs
 * The header displays all hidden element when hovering away from browser (for example to menubar)
