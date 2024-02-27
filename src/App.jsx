@@ -139,7 +139,7 @@ const [isVisible, setIsVisible] = useState(true);
             </div>
       </div>
 
-      <div className="login-section pt-8 h-[400px] rounded-lg shadow-lg mx-auto flex flex-row">
+      <div id="login-section" className="login-section pt-8 h-[400px] rounded-lg shadow-lg mx-auto flex flex-row">
         <div className="bg-slate-600 w-1/2">
           <h1> image</h1>
         </div>
