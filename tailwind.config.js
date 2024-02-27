@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'roboto': ['Roboto', 'sans-serif'],
+      },
       colors: {
         customBg: '#F8F8FF',
         customBlack: '#1a1a1a',

@@ -27,7 +27,7 @@ const Auth = () => {
 
     return (
         <div className='flex flex-col items-center'>
-            <div className='flex mb-4 '>
+            <div className='flex mb-4 pt-4'>
                 <button
                     className={`text-2xl font-semibold py-4 mr-4 ${isLoginForm ? 'text-blue-500 underline underline-offset-2' : 'text-gray-600 no-underline'}`}
                     onClick={switchForm}
@@ -45,7 +45,7 @@ const Auth = () => {
                 <input
                     className="w-full px-2 py-1 m-2 rounded-md border-2 border-gray-400 focus:outline-none focus:border-blue-500 focus:ring-blue-500 transition-all duration-300"
                     type="email"
-                    placeholder="Email"
+                    placeholder="username"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />

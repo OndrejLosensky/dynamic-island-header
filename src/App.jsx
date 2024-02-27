@@ -80,7 +80,7 @@ const [isVisible, setIsVisible] = useState(true);
     }, []); // Empty dependency array ensures the effect runs only once
     
   return (
-    <section className="main-component">
+    <section className="main-component font-roboto">
       <ScrollProgress/>
       <div className="pt-4 sticky top-0 z-10 ">
         <DynamicIsland/>
@@ -126,9 +126,9 @@ const [isVisible, setIsVisible] = useState(true);
         )}
       </div>
           
-      <div data-aos="fade-left" id="banner" className="pb-20 pt-32">
+      <div data-aos="fade-left" id="banner" className="font-roboto pb-20 pt-32">
             <div className="div-bugs-section w-[100%] h-[250px] bg-slate-500"> 
-                <h3 className="text-bugs-section text-center pt-12">annoying bugs</h3>
+                <h3 className="text-bugs-section text-center pt-12 uppercase">annoying bugs</h3>
                 <h1 className="heading-bugs-section text-center text-customWhite font-semibold text-4xl pt-0"> Common bugs</h1>
                 <p className="paragraph-bugs-section text-center text-gray-400 font-thin text-xl pt-4">
                   <li> Login not working </li>
@@ -139,11 +139,21 @@ const [isVisible, setIsVisible] = useState(true);
             </div>
       </div>
 
-      <div id="login-section" className="login-section pt-8 h-[400px] rounded-lg shadow-lg mx-auto flex flex-row">
-        <div className="bg-slate-600 w-1/2">
-          <h1> image</h1>
+      <div id="login-section" className="login-section font-roboto pt-8 h-[400px] rounded-lg shadow-lg mx-auto flex flex-row">
+        <div className="left-side-login w-1/2 flex flex-col items-center justify-center">
+          <SectionTitleHeading title="Login section"/>
+          <h2 className="font-bold text-3xl pb-2 text-customBlack text-center uppercase" style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}>
+            You can login or register here
+          </h2>
+          <p className="text-slate-500 text-center">
+            Everything is processed with Firebase. <br /> All passwords are encrypted.
+          </p>
+          <br />
+          <p className="pt-12 font-thin italic text-slate-500 text-center">
+            Register by switching from the login form to the registration form.
+          </p>
         </div>
-        <div className="bg-slate-300 w-1/2">
+        <div className="login-side w-1/2">
           <Auth/>
         </div>
       </div>
