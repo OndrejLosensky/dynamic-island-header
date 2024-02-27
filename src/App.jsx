@@ -13,6 +13,7 @@ import scrolldown_dark from "./assets/scroll_down_black.png"
 import light from "./assets/light.png"
 import dark from "./assets/dark.png"
 import source_code from "./assets/src_code.png"
+import Auth from "./auth/Auth"
 //import screenshot_light from "./assets/screenshot1.png"
 //import screenshot_dark from "./assets/screenshot2.png"
 
@@ -77,8 +78,7 @@ const [isVisible, setIsVisible] = useState(true);
         window.removeEventListener('keydown', handleKeyDown);
       };
     }, []); // Empty dependency array ensures the effect runs only once
-  
-
+    
   return (
     <section className="main-component">
       <ScrollProgress/>
@@ -129,7 +129,7 @@ const [isVisible, setIsVisible] = useState(true);
       <div data-aos="fade-left" id="banner" className="pb-20 pt-32">
             <div className="div-bugs-section w-[100%] h-[250px] bg-slate-500"> 
                 <h3 className="text-bugs-section text-center pt-12">annoying bugs</h3>
-                <h1 className="heading-bugs-section text-center text-customWhite font-semibold text-4xl pt-2"> Common bugs</h1>
+                <h1 className="heading-bugs-section text-center text-customWhite font-semibold text-4xl pt-0"> Common bugs</h1>
                 <p className="paragraph-bugs-section text-center text-gray-400 font-thin text-xl pt-4">
                   <li> Login not working </li>
                   <li>Mobile / smaller devices view isnt done yet</li>
@@ -137,6 +137,15 @@ const [isVisible, setIsVisible] = useState(true);
                 </p>
                 {/*<img src={isLight ? screenshot_light : screenshot_dark} className="mx-auto w-[600px] pt-8 rounded-2xl shadow-2xl" alt="Description" />*/}
             </div>
+      </div>
+
+      <div className="login-section pt-8 h-[400px] rounded-lg shadow-lg mx-auto flex flex-row">
+        <div className="bg-slate-600 w-1/2">
+          <h1> image</h1>
+        </div>
+        <div className="bg-slate-300 w-1/2">
+          <Auth/>
+        </div>
       </div>
 
       <div className="flex flex-col justify-center text-customBlack items-center h-auto pt-16 pb-16">

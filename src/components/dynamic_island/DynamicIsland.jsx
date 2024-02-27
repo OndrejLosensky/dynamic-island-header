@@ -34,7 +34,7 @@ const DynamicIsland = () => {
 
   return (
     <section 
-    className='w-[250px] mx-auto duration-500 hover:w-[1000px] relative '
+    className='w-[1000px] mx-auto duration-500 hover:w-[1000px] relative '
     onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
     onClick={handleClickOutside}
