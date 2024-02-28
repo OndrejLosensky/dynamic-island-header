@@ -30,7 +30,7 @@ Simple web application made with React.js styled with TailwindCSS. Instead of cl
 ## Features
 * Dynamic island header
 * Dark mode
-* Keyboard shortot to toggle **on/off** dark mode
+* Keyboard shortcut to toggle **on/off** dark mode
 * Scroll Progress bar (you can find source code for it [here](https://github.com/OndrejLosensky/dynamic-island-header/tree/main/src/components/scroll_progress))
 * scroll down button
 * login and register form (only styling)
