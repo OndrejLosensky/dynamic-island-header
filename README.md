@@ -18,12 +18,12 @@ Simple web application made with React.js styled with TailwindCSS. Instead of cl
 
 ## Preview
 ### Light mode
-<img width="400" style="float:left; margin-rigt: 10px" alt="Snímek obrazovky 2024-02-24 v 11 41 02" src="https://github.com/OndrejLosensky/dynamic-island-header/assets/127244546/65639728-da25-43f4-a644-e6a2b07c909e">
-<img width="400" style="float:left; margin-rigt: 10px" alt="Snímek obrazovky 2024-02-24 v 11 41 16" src="https://github.com/OndrejLosensky/dynamic-island-header/assets/127244546/1a44d749-1ac6-4c52-a7f4-f58b963daca2">
+<img width="800" style="float:left; margin-rigt: 10px" alt="Snímek obrazovky 2024-02-24 v 11 41 02" src="https://github.com/OndrejLosensky/dynamic-island-header/assets/127244546/65639728-da25-43f4-a644-e6a2b07c909e">
+<img width="800" style="float:left; margin-rigt: 10px" alt="Snímek obrazovky 2024-02-24 v 11 41 16" src="src/assets/Snímek obrazovky 2024-02-28 182418.png">
 
 ### Dark mode
-<img width="400" style="float:left; margin-rigt: 10px" alt="Snímek obrazovky 2024-02-24 v 11 45 57" src="https://github.com/OndrejLosensky/dynamic-island-header/assets/127244546/53c8cb0e-8a71-46e4-a92c-1402394900c2">
-<img width="400" style="float:left; margin-rigt: 10px" alt="Snímek obrazovky 2024-02-24 v 11 46 11" src="https://github.com/OndrejLosensky/dynamic-island-header/assets/127244546/79a4d3a8-29e8-4f33-93a6-57097db8d077">
+<img width="800" style="float:left; margin-rigt: 10px" alt="Snímek obrazovky 2024-02-24 v 11 45 57" src="https://github.com/OndrejLosensky/dynamic-island-header/assets/127244546/53c8cb0e-8a71-46e4-a92c-1402394900c2">
+<img width="800" style="float:left; margin-rigt: 10px" alt="Snímek obrazovky 2024-02-24 v 11 46 11" src="src/assets/Snímek obrazovky 2024-02-28 182428.png">
 
 
 
