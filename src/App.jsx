@@ -14,6 +14,7 @@ import light from "./assets/light.png"
 import dark from "./assets/dark.png"
 import source_code from "./assets/src_code.png"
 import Auth from "./auth/Auth"
+import bannerImg from "./assets/banner-left.jpg"
 //import screenshot_light from "./assets/screenshot1.png"
 //import screenshot_dark from "./assets/screenshot2.png"
 
@@ -28,11 +29,17 @@ function App() {
   }
 
   const scrollToAnchor = () => {
-    const element = document.getElementById('banner');
+    const element = document.getElementById('login-section');
+    const offset = 100; 
+  
     if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      const offsetTop = element.offsetTop - offset;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
     }
-};
+  };
 const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
@@ -126,30 +133,18 @@ const [isVisible, setIsVisible] = useState(true);
         )}
       </div>
           
-      <div data-aos="fade-left" id="banner" className="font-roboto pb-20 pt-32">
-            <div className="div-bugs-section w-[100%] h-[250px] bg-slate-500"> 
-                <h3 className="text-bugs-section text-center pt-12 uppercase">annoying bugs</h3>
-                <h1 className="heading-bugs-section text-center text-customWhite font-semibold text-4xl pt-0"> Common bugs</h1>
-                <p className="paragraph-bugs-section text-center text-gray-400 font-thin text-xl pt-4">
-                  <li> Login not working </li>
-                  <li>Mobile / smaller devices view isnt done yet</li>
-                  <li> Header displaying all elemenets when hovering away from browser  </li>
-                </p>
-                {/*<img src={isLight ? screenshot_light : screenshot_dark} className="mx-auto w-[600px] pt-8 rounded-2xl shadow-2xl" alt="Description" />*/}
-            </div>
-      </div>
 
-      <div id="login-section" className="login-section font-roboto pt-8 h-[450px] rounded-lg shadow-lg mx-auto flex flex-row">
-        <div className="left-side-login w-1/2 flex flex-col items-center justify-center">
-          <SectionTitleHeading title="Login section"/>
-          <h2 className="font-bold text-3xl pb-2 text-customBlack text-center uppercase" style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}>
-            You can login or register here
+      <div id="login-section" className="login-section font-roboto mt-32 mb-12 h-[450px] shadow-2xl mx-auto flex flex-row">
+        <div className="w-1/2 flex flex-col items-center justify-center bg-[url('../src/assets/banner-left.jpg')] opacity-95 ">
+          <SectionTitleHeading title="Login section"/>   
+          <h2 className="font-bold text-4xl pb-2 text-customWhite text-center uppercase" style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}>
+            Welcome user
           </h2>
-          <p className="text-slate-500 text-center">
+          <p className="text-slate-300 text-center">
             Everything is processed with Firebase. <br /> All passwords are encrypted.
           </p>
           <br />
-          <p className="pt-12 font-thin italic text-slate-500 text-center">
+          <p className="pt-12 font-thin italic text-slate-400 text-center">
             Register by switching from the login form to the registration form.
           </p>
         </div>
@@ -157,6 +152,8 @@ const [isVisible, setIsVisible] = useState(true);
           <Auth/>
         </div>
       </div>
+
+      
 
       <div className="flex flex-col justify-center text-customBlack items-center h-auto pt-16 pb-16">
         <div id="data-anchor" className="grid grid-cols-1 gap-8">
@@ -172,7 +169,20 @@ const [isVisible, setIsVisible] = useState(true);
             <Data />
             <Data />
           </div>
-          
+        
+          <div data-aos="fade-left" id="banner" className="font-roboto pb-20 pt-32">
+            <div className="div-bugs-section w-[100%] h-[250px] bg-slate-500"> 
+                <h3 className="text-bugs-section text-center pt-12 uppercase">annoying bugs</h3>
+                <h1 className="heading-bugs-section text-center text-customWhite font-semibold text-4xl pt-0"> Common bugs</h1>
+                <p className="paragraph-bugs-section text-center text-gray-400 font-thin text-xl pt-4">
+                  <li> Login not working </li>
+                  <li>Mobile / smaller devices view isnt done yet</li>
+                  <li> Header displaying all elemenets when hovering away from browser  </li>
+                </p>
+                {/*<img src={isLight ? screenshot_light : screenshot_dark} className="mx-auto w-[600px] pt-8 rounded-2xl shadow-2xl" alt="Description" />*/}
+            </div>
+           </div>
+
           <div id="anchor2">
             <div data-aos="fade-left">
               <SectionTitleHeading title="Section 2"/>

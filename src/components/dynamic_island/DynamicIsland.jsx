@@ -16,7 +16,7 @@ const DynamicIsland = () => {
 
   const scrollToAnchor = () => {
     const element = document.getElementById('login-section');
-    const offset = 60; 
+    const offset = 100; 
   
     if (element) {
       const offsetTop = element.offsetTop - offset;

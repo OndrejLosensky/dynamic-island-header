@@ -3,85 +3,68 @@ import React, { useState } from 'react';
 const Auth = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
     const [isLoginForm, setIsLoginForm] = useState(true);
+    const [error, setError] = useState('');
 
-    const handleLogin = () => {
-        // Your login logic here
-        console.log('Logging in with:', email, password);
-        // Optionally, you can redirect or perform other actions after login
+    const handleLogin = async () => {
+       // login logic
     };
 
-    const handleRegister = () => {
-        // Your registration logic here
-        console.log('Registering with:', email, password);
-        // Optionally, you can redirect or perform other actions after registration
+    const handleRegister = async () => {
+        // register logic
     };
 
     const switchForm = () => {
         setIsLoginForm(!isLoginForm);
         setEmail('');
         setPassword('');
-        setConfirmPassword('');
+        setError('');
     };
 
     return (
         <div className='flex flex-col items-center'>
-            <div className='flex mb-4 pt-8'>
+            <div className='form-buttons flex mb-4 pt-8'>
                 <button
-                    className={`text-2xl font-semibold py-4 mr-4 ${isLoginForm ? 'text-blue-500' : 'text-gray-600'}`}
+                    className={`text-2xl font-semibold py-4 mr-4 ${isLoginForm ? 'text-blue-500 underline underline-offset-8' : 'text-gray-600'}`}
                     onClick={switchForm}
                 >
-                    Login
+                    Sign In
                 </button>
                 <button
-                    className={`text-2xl font-semibold py-4  ${isLoginForm ? 'text-gray-600' : 'text-blue-500'}`}
+                    className={`text-2xl font-semibold py-4  ${isLoginForm ? 'text-gray-600' : 'text-blue-500 underline underline-offset-8'}`}
                     onClick={switchForm}
                 >
-                    Register
+                    Registration
                 </button>
             </div>
             <div className='flex flex-col'>
-                <input
-                    className="w-full px-2 py-1 m-2 rounded-md border-2 border-gray-400 focus:outline-none focus:border-blue-500 focus:ring-blue-500 transition-all duration-300"
-                    type="email"
-                    placeholder="username"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <input
-                    className="w-full px-2 py-1 m-2 rounded-md border-2 border-gray-400 focus:outline-none focus:border-blue-500 focus:ring-blue-500 transition-all duration-300"
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                {!isLoginForm && ( // Rendering confirm password input only for register form
+                <div className='w-3/4 mx-auto'>
                     <input
-                        className="w-full px-2 py-1 m-2 rounded-md border-2 border-gray-400 focus:outline-none focus:border-blue-500 focus:ring-blue-500 transition-all duration-300"
-                        type="password"
-                        placeholder="Confirm Password"
-                        value={confirmPassword}
-                        onChange={(e) => setConfirmPassword(e.target.value)}
+                        className="form-input w-full px-2 py-1 m-2 rounded-md border-2 border-gray-400 focus:outline-none focus:border-blue-500 focus:ring-blue-500 transition-all duration-300"
+                        type="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
                     />
-                )}
-                {isLoginForm ? (
-                    <button
-                        className='bg-customBlue w-[100px] mx-auto shadow-lg text-customWhite rounded-lg px-4 py-1 mb-6 mt-2 hover:bg-blue-700 hover:-translate-y-1 duration-300'
-                        onClick={handleLogin}
-                    >
-                        Login
-                    </button>
-                ) : (
-                    <button
-                        className='bg-customBlue w-[100px] mx-auto shadow-lg text-customWhite rounded-lg px-4 py-1 mb-6 mt-2 hover:bg-blue-700 hover:-translate-y-1 duration-300'
-                        onClick={handleRegister}
-                    >
-                        Register
-                    </button>
-                )}
+                    <input
+                        className="form-input w-full px-2 py-1 m-2 rounded-md border-2 border-gray-400 focus:outline-none focus:border-blue-500 focus:ring-blue-500 transition-all duration-300"
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                </div>
+                <button
+                    className='bg-customBlue w-[100px] mx-auto shadow-lg text-customWhite rounded-lg px-4 py-1 mb-6 mt-2 hover:bg-blue-700 hover:-translate-y-1 duration-300'
+                    onClick={isLoginForm ? handleLogin : handleRegister}
+                >
+                    {isLoginForm ? 'Login' : 'Register'}
+                </button>
+                {error && <p className="text-red-500">{error}</p>}
             </div>
-            <p className='my-4'>
+            <p className='my-4 login-bottom'>
                 {isLoginForm ? "Don't have an account?" : "Already have an account?"}
                 <button className='font-semibold underline ml-1' onClick={switchForm}>
                     {isLoginForm ? "Register" : "Login"}
